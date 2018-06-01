@@ -9,7 +9,6 @@
         <v-card >
           <v-toolbar class="quote">
             <v-btn icon>
-              <v-icon color="pink">arrow_back</v-icon>
               <img class="maleta" src="./assets/maleta.png" alt="maleta">
             </v-btn>
             <v-toolbar-title>COTIZA EL SEGURO DE TU PRÓXIMO VIAJE</v-toolbar-title>
@@ -18,9 +17,9 @@
               <v-icon color="pink">more_vert</v-icon>
             </v-btn>
           </v-toolbar>
-              <transition name="fade" mode="out-in">
-        <router-view></router-view>
-    </transition> 
+          <transition name="fade" mode="out-in">
+          <router-view></router-view>
+          </transition> 
         </v-card>
       </v-flex>
     </v-layout>
@@ -32,13 +31,11 @@
 
 <script>
 import HeaderComponent from "./components/HeaderComponent";
-import TravelQuote from "./components/TravelQuote";
 
 export default {
   name: 'app',
    components: {
     HeaderComponent,
-    TravelQuote
   },
   data () {
     return {

@@ -1,7 +1,11 @@
 <template>
   <v-container fluid grid-list-md>
-    <v-layout row wrap>      
-          <v-flex xs12 sm3 md3 offset-xs3 offset-md2 offset-lg3>
+    <v-layout row wrap>
+     <router-link to="/">
+      <i aria-hidden="true" class="icon pink--text material-icons">arrow_back</i>      
+     </router-link>
+     <br>
+      <v-flex xs12 sm3 md3 offset-xs3 offset-md2 offset-lg3>
         <v-card dark color="primary">
           <v-card-text>Plan Estándar</v-card-text>
            <v-card-text>$ 54.2</v-card-text>

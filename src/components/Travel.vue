@@ -100,11 +100,11 @@
     </v-flex>
     <v-spacer></v-spacer>
   </v-layout>       
-                   <v-layout row wrap>
-                       <v-flex xs12 sm10 md8 order-md4 order-sm2>
-                          <v-btn class="pink white--text" @click="addToAPI">Cotizar</v-btn>   
-                        </v-flex>
-                    </v-layout>
+    <v-layout row wrap>
+        <v-flex xs12 sm10 md8 order-md4 order-sm2>
+           <v-btn class="pink white--text" @click="addToAPI">Cotizar</v-btn>   
+      </v-flex>
+  </v-layout>
    </form>
   </v-container>
 </template>
