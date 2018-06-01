@@ -9,7 +9,9 @@ Vue.use(Vuetify)
 window.EventBus = new Vue()
 
 new Vue({
-    el: '#app',
-    router,
-    render: h => h(App)
+  el: '#app',
+  router,
+  render: h => h(App)
 })
+
+
