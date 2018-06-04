@@ -1,8 +1,8 @@
 import axios from 'axios'
-const interseguroUrl = 'https://testsoat.interseguro.com.pe/talentfestapi/destinos'
+const interseguroUrl = 'https://testsoat.interseguro.com.pe/talentfestapi'
 
 export function getDestination() {
-  return axios.get(interseguroUrl).then(response => {
+  return axios.get(interseguroUrl+'/destinos').then(response => {
     const {
       data
     } = response,
@@ -29,4 +29,19 @@ export function ajaxFindPlace(query) {
       }, 1000)
     });
   })
+}
+const proxy = 'https://cors-anywhere.herokuapp.com/';
+export function getQuotation(destino,fecha_partida,fecha_retorno,cantidad_pasajeros) {
+  return axios.post(proxy + interseguroUrl +'/cotizacion', {
+    destino: destino,
+    fecha_partida: fecha_partida,
+    fecha_retorno: fecha_retorno,
+    cantidad_pasajeros: cantidad_pasajeros
+  })
+  .then((response) => {
+    let envio = response.data;
+    return envio
+  }).catch(function (error) {
+    console.log(error);
+  });
 }
