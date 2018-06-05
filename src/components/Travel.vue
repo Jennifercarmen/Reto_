@@ -109,10 +109,12 @@
       </v-flex>
   </v-layout>
    </v-form>
+    <Quotation :array="arrQuot"/>
   </v-container>
 </template>
 
 <script>
+import Quotation from "./Quotation";
 import Multiselect from 'vue-multiselect';
 import axios from 'axios';
 
@@ -127,7 +129,8 @@ export default {
       Destination: [],
       isLoading: false,
       title: '',
-      arrQuot: [],
+      arrQuot: null,
+      arrQuotcar : null,
       rules: {
         required: (value) => !!value || 'Required.',
       },
@@ -140,12 +143,12 @@ export default {
         going: null,
         return: null,
         passengers: ''
-      },
-      count: 0
+      }
     }
   },
   components: {
-    Multiselect
+    Multiselect,
+    Quotation
   },
   methods: {
     limitText(count) {
@@ -168,12 +171,13 @@ export default {
         let fecha_retorno= this.Travel.return
         let cantidad_pasajeros= this.Travel.passengers
         getQuotation(destino,fecha_partida,fecha_retorno,cantidad_pasajeros).then(response => {
-        this.arrQuot = response
-        let env = this.arrQuot;
-        EventBus.$emit('items', env);
-          self.$router.push('/quotation');
+                  console.log(response);
+     this.arrQuot=response;
+       this.arrQuotcar=response['caracteristicas'];
+        console.log(this.arrQuot);
+                console.log(this.arrQuotcar);
+
       })
-        
       },
   }
 }

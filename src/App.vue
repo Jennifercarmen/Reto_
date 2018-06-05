@@ -22,9 +22,9 @@
           </transition> 
         </v-card>
       </v-flex>
+
     </v-layout>
   </v-container>
-       
     </v-app>
   </div>
 </template>
@@ -35,7 +35,7 @@ import HeaderComponent from "./components/HeaderComponent";
 export default {
   name: 'app',
    components: {
-    HeaderComponent,
+    HeaderComponent
   },
   data () {
     return {
