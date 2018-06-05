@@ -5,7 +5,7 @@
       <i aria-hidden="true" class="icon pink--text material-icons">arrow_back</i>      
      </router-link>
      <br>
-      <v-flex xs12 sm3 md3 offset-xs3 offset-md2 offset-lg3  v-for="(item,index) in array" :key="index">
+      <v-flex xs12 sm3 md3  v-for="(item,index) in array" :key="index">
         <v-card dark color="primary">
           <v-card-text> 
             {{ item.tipo_plan }}

@@ -171,9 +171,7 @@ export default {
         let fecha_retorno= this.Travel.return
         let cantidad_pasajeros= this.Travel.passengers
         getQuotation(destino,fecha_partida,fecha_retorno,cantidad_pasajeros).then(response => {
-                  console.log(response);
-     this.arrQuot=response;
-       this.arrQuotcar=response['caracteristicas'];
+        this.arrQuot=response;
         console.log(this.arrQuot);
                 console.log(this.arrQuotcar);
 
